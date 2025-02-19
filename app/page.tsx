@@ -1,19 +1,25 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { ArrowRight, Bird, Brain, Zap } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Bird, Brain, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null)
+  const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-600 to-pink-500 text-white">
       <div className="container mx-auto px-4 py-8">
-        <motion.div initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="text-center mb-12">
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="text-center mb-12"
+        >
           <h1 className="text-6xl md:text-8xl font-bold mb-4">grawk!</h1>
-          <p className="text-xl md:text-2xl">Lost in the land of AI companies with similar names?</p>
+          <p className="text-xl md:text-2xl">
+            Lost in the land of AI companies with similar names?
+          </p>
           <div className="mt-4 flex items-center justify-center gap-2">
             <Bird className="w-8 h-8 animate-bounce" />
             <p className="text-lg">Let me help you find your way!</p>
@@ -31,7 +37,9 @@ export default function Home() {
           >
             <Zap className="w-16 h-16 mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4">groq</h2>
-            <p className="text-xl mb-6">AI inference on some sort of magical hardware</p>
+            <p className="text-xl mb-6">
+              AI inference on some sort of magical hardware
+            </p>
             <Button
               variant="outline"
               className="bg-white/10 hover:bg-white/20"
@@ -82,7 +90,10 @@ export default function Home() {
           transition={{ delay: 0.5 }}
           className="text-center mt-12 space-y-2 text-white/60"
         >
-          <p>Not affiliated with either company. Just a helpful bird helping you find your way! 🦜</p>
+          <p>
+            Not affiliated with either company. Just a helpful bird helping you
+            find your way! 🦜
+          </p>
           <p>
             Created by{" "}
             <a
@@ -97,6 +108,5 @@ export default function Home() {
         </motion.footer>
       </div>
     </div>
-  )
+  );
 }
-
